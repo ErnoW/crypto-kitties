@@ -1,29 +1,28 @@
+![Cats](./images/cats.png)
+
 # CryptoKitties
 
 CryptoKitties is a ERC721 token, where you can buy, sell and breed your own kitties.
 
 Part of Ivan on Tech [Ivan on Tech Academy](https://academy.ivanontech.com/) bootcamp.
 
-
-![Preview](./images/detail.png)
-![Preview2](./images/catalogue.png)
-
-
 ## Table of Contents
+
 - [Ethereum](#ethereum)
-  * [Smart contract structure](#smart-contract-structure)
-  * [ERC721](#erc721)
-  * [ERC 165](#erc-165)
-  * [Gen0](#gen0)
-  * [DNA](#dna)
-  * [Randomness](#randomness)
-  * [Instalation](#instalation)
-  * [Deploy locally](#deploy-locally)
-  * [Deploy to test network](#deploy-to-test-network)
+  - [Smart contract structure](#smart-contract-structure)
+  - [ERC721](#erc721)
+  - [ERC 165](#erc-165)
+  - [Gen0](#gen0)
+  - [DNA](#dna)
+  - [Randomness](#randomness)
+  - [Instalation](#instalation)
+  - [Deploy locally](#deploy-locally)
+  - [Deploy to test network](#deploy-to-test-network)
 - [Client](#client)
-  * [Instalation](#instalation-1)
+  - [Instalation](#instalation-1)
     - [Local development](#local-development)
-  * [Deploy client](#deploy-client)
+  - [Deploy client](#deploy-client)
+- [Images](#images)
 
 ## Ethereum
 
@@ -134,8 +133,14 @@ yarn start
 ```
 
 ### Deploy client
+
 Have `netlify-cli` installed
 
 ```bash
 npm install netlify-cli -g
 ```
+
+## Images
+
+![Preview](./images/detail.png)
+![Preview2](./images/catalogue.png)
