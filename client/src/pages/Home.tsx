@@ -19,7 +19,7 @@ export const Home = () => {
           Ivan on Tech Academy
         </Link>{" "}
         project, made by{" "}
-        <Link href="http://ernowever.com" target="_blank" rel="noopener">
+        <Link href="https://github.com/ErnoW/" target="_blank" rel="noopener">
           Erno Wever
         </Link>
       </Typography>

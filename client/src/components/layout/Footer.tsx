@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Grid, Typography, Link } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faFileContract, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export const Footer = () => {
@@ -23,11 +23,18 @@ export const Footer = () => {
               align="right"
             >
               <Link
-                href="https://github.com/ernoW"
+                href="https://github.com/ErnoW/crypto-kitties"
                 target="_blank"
                 rel="noopener"
               >
-                <FontAwesomeIcon icon={faGithub} />
+                <FontAwesomeIcon fixedWidth icon={faGithub} />
+              </Link>{" "}
+              <Link
+                href="https://ropsten.etherscan.io/address/0xd5fD45667A3069857f3C86D952Ae6aA350951f87"
+                target="_blank"
+                rel="noopener"
+              >
+                <FontAwesomeIcon fixedWidth icon={faFileContract} />
               </Link>
             </Typography>
           </Grid>
