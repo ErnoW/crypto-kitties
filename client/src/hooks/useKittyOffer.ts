@@ -26,7 +26,7 @@ export const useKittyOffer = (id: number) => {
     async (marketPlace: Contract | null, reFetch?: boolean) => {
       setHasError(false);
       setIsFetching(true);
-      
+
       if (offers[id] && !reFetch) {
         // Kitty already has been loaded, so lets use the value from the store
         setOffer(offers[id]);
@@ -60,7 +60,7 @@ export const useKittyOffer = (id: number) => {
         setIsFetching(false);
       }
     },
-    [id, offers, marketPlace, addOffer],
+    [id, offers, marketPlace, addOffer]
   );
 
   useEffect(() => {

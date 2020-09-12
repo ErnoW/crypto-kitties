@@ -8,8 +8,8 @@ interface MarketPlaceProps {
 }
 
 export const MarketPlace = ({ children }: MarketPlaceProps) => {
-  const {offeredKittyIds} = useAllOffers()
-  
+  const { offeredKittyIds } = useAllOffers();
+
   return (
     <div>
       <Header title="MarketPlace" subTitle="You break it, you buy it" />

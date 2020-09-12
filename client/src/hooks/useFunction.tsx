@@ -14,7 +14,7 @@ export const contactCall = async (
   contract: Contract,
   name: string,
   args: unknown[] = [],
-  value?: BigNumber,
+  value?: BigNumber
 ) => {
   const parsedValue = value ? value.toString() : undefined;
 
@@ -125,7 +125,7 @@ export const useFunction = (contract: Contract | null, name: string) => {
       addTransactionMessage,
       removeTransactionMessage,
       showCompleteMessage,
-    ],
+    ]
   );
 
   return { call, hasError };

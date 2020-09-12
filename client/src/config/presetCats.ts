@@ -6,5 +6,5 @@ export const CatPreset = {
   FancyCat: "2900397930256857",
   SpaceCat: "9520612801289657",
   GirlyCat: "3908550096369189",
-  WeirdCat: "5688959649746782"
-}
+  WeirdCat: "5688959649746782",
+};

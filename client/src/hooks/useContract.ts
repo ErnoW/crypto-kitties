@@ -12,7 +12,7 @@ import { Contract } from "@ethersproject/contracts";
 
 export const useContract = (
   address: string | null,
-  abi: typeof kittyCoreAbi | typeof marketPlaceAbi,
+  abi: typeof kittyCoreAbi | typeof marketPlaceAbi
 ) => {
   const { library, account } = useWeb3React();
 

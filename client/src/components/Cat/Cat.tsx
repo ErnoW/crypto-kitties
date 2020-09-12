@@ -11,15 +11,15 @@ export type CatConfig = { [key in CatConfigProperties]: number };
 
 interface CatPropsConfig {
   config: CatConfig;
-  maxWidth?: number
+  maxWidth?: number;
 }
 
 interface CatPropsDna {
   dna: string;
-  maxWidth?: number
+  maxWidth?: number;
 }
 
-type  CatProps = CatPropsConfig | CatPropsDna
+type CatProps = CatPropsConfig | CatPropsDna;
 
 const CatWrapper = styled.div<{
   mainColor: string;
@@ -27,13 +27,13 @@ const CatWrapper = styled.div<{
   secondaryColor: string;
   patternColor: string;
   eyesColor: string;
-  maxWidth?: number
+  maxWidth?: number;
 }>`
   width: 100%;
-  max-width: ${props => props.maxWidth ? `${props.maxWidth}px` : ''};
+  max-width: ${(props) => (props.maxWidth ? `${props.maxWidth}px` : "")};
   position: relative;
 
-  &::after{
+  &::after {
     content: "";
     display: block;
     padding-bottom: 110%;
@@ -63,23 +63,45 @@ const CatWrapper = styled.div<{
 `;
 
 export const Cat = (props: CatProps) => {
-  const config = ('config' in props) ? props.config : getConfigFromDna(props.dna);
-  const { mainColor, secondaryColor, patternColor, eyeColor, eyes, mouth, decoration, pattern, hidden1, hidden2 } = config
-  const { maxWidth } = props
+  const config = "config" in props ? props.config : getConfigFromDna(props.dna);
+  const {
+    mainColor,
+    secondaryColor,
+    patternColor,
+    eyeColor,
+    eyes,
+    mouth,
+    decoration,
+    pattern,
+    hidden1,
+    hidden2,
+  } = config;
+  const { maxWidth } = props;
 
   const PatternComponent = catConfig.properties.pattern.variations[pattern];
   const EyesComponent = catConfig.properties.eyes.variations[eyes];
   const MouthComponent = catConfig.properties.mouth.variations[mouth];
-  const DecorationComponent = catConfig.properties.decoration.variations[decoration];
+  const DecorationComponent =
+    catConfig.properties.decoration.variations[decoration];
 
-  const mainColorHex = Color(catConfig.properties.mainColor.variations[mainColor]).toString();
-  const mainColorDarkHex = Color(catConfig.properties.mainColor.variations[mainColor])
+  const mainColorHex = Color(
+    catConfig.properties.mainColor.variations[mainColor]
+  ).toString();
+  const mainColorDarkHex = Color(
+    catConfig.properties.mainColor.variations[mainColor]
+  )
     .darken(0.65)
     .saturate(0.5)
     .toString();
-  const secondaryColorHex = Color(catConfig.properties.secondaryColor.variations[secondaryColor]).toString();
-  const patternColorHex = Color(catConfig.properties.patternColor.variations[patternColor]).toString();
-  const eyesColorHex = Color(catConfig.properties.eyeColor.variations[eyeColor]).toString();
+  const secondaryColorHex = Color(
+    catConfig.properties.secondaryColor.variations[secondaryColor]
+  ).toString();
+  const patternColorHex = Color(
+    catConfig.properties.patternColor.variations[patternColor]
+  ).toString();
+  const eyesColorHex = Color(
+    catConfig.properties.eyeColor.variations[eyeColor]
+  ).toString();
 
   const showDecoration = hidden1 > 5;
   const showPattern = hidden2 > 5;
@@ -94,10 +116,16 @@ export const Cat = (props: CatProps) => {
       maxWidth={maxWidth}
     >
       <Base style={{ position: "absolute", top: 0, left: 0 }} />
-      {showPattern && <PatternComponent style={{ position: "absolute", top: 0, left: 0 }} />}
+      {showPattern && (
+        <PatternComponent style={{ position: "absolute", top: 0, left: 0 }} />
+      )}
       <EyesComponent style={{ position: "absolute", top: 0, left: 0 }} />
       <MouthComponent style={{ position: "absolute", top: 0, left: 0 }} />
-      {showDecoration && <DecorationComponent style={{ position: "absolute", top: 0, left: 0 }} />}
+      {showDecoration && (
+        <DecorationComponent
+          style={{ position: "absolute", top: 0, left: 0 }}
+        />
+      )}
       <Paws style={{ position: "absolute", top: 0, left: 0 }} />
       <Whiskers style={{ position: "absolute", top: 0, left: 0 }} />
 

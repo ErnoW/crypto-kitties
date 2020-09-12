@@ -1,9 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {  faHatWizard } from "@fortawesome/free-solid-svg-icons";
+import { faHatWizard } from "@fortawesome/free-solid-svg-icons";
 import { KittyChip } from "./KittyChip";
 import { Tooltip } from "@material-ui/core";
-import {  getDecorationName } from "../../utils/getAttributeName";
+import { getDecorationName } from "../../utils/getAttributeName";
 import { CatConfig } from "../Cat/Cat";
 import { shouldShowDecoration } from "../../utils/catLogic";
 
@@ -16,8 +16,8 @@ export const DecorationChip = ({ kittyConfig }: DecorationChipProps) => {
 
   const decorationName = getDecorationName(decoration);
 
-  if(!shouldShowDecoration(kittyConfig)){
-    return null
+  if (!shouldShowDecoration(kittyConfig)) {
+    return null;
   }
 
   const label = `With ${decorationName}`;

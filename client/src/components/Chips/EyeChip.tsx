@@ -18,8 +18,8 @@ export const EyeChip = ({ kittyConfig }: EyeChipProps) => {
   const colorName = getColorName(colorHex);
   const eyeName = getEyeName(eyes);
 
-  let label:string
-  if([4,6,7].includes(eyes)){
+  let label: string;
+  if ([4, 6, 7].includes(eyes)) {
     label = `${eyeName} Eyes`;
   } else {
     label = `${colorName} ${eyeName} Eyes`;

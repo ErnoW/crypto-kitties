@@ -11,7 +11,7 @@ type KittiesReducerActions = {
 type KittiesMap = { [key: number]: FetchedKitty };
 const kittiesReducer: React.Reducer<KittiesMap, KittiesReducerActions> = (
   state,
-  action,
+  action
 ) => {
   switch (action.type) {
     case "addKitty":
@@ -33,7 +33,7 @@ type OffersReducerActions = AddOfferAction | RemoveOfferAction;
 type OffersMap = { [key: number]: FetchedOffer };
 const offersReducer: React.Reducer<OffersMap, OffersReducerActions> = (
   state,
-  action,
+  action
 ) => {
   switch (action.type) {
     case "addOffer": {

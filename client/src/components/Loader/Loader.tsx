@@ -42,7 +42,7 @@ const Dot = styled.div`
   left: 0;
   top: 0;
   animation: ${chaseDot} 2s infinite ease-in-out both;
-  
+
   &:before {
     content: "";
     display: block;

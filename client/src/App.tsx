@@ -6,7 +6,7 @@ import {
   Box,
   Paper,
 } from "@material-ui/core";
-import {  Switch } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import styled from "styled-components";
 
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
@@ -47,17 +47,21 @@ function App() {
     <>
       <CssBaseline />
       <AppWrapper>
-        {chainId !== 3 &&<Paper variant="outlined" square>
-          <Box px={2} py={1} display="flex" justifyContent="center" alignItems="center">
-          <Typography
-            variant="overline"
-            align="center"
-            color="textPrimary"
-          >
-            Currently available on Ropsten testnet
-          </Typography>
-          </Box>
-        </Paper>}
+        {chainId !== 3 && (
+          <Paper variant="outlined" square>
+            <Box
+              px={2}
+              py={1}
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Typography variant="overline" align="center" color="textPrimary">
+                Currently available on Ropsten testnet
+              </Typography>
+            </Box>
+          </Paper>
+        )}
         <NavigationBar menuItems={routes(store)} />
         <Main>
           <Container>

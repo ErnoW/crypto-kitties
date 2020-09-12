@@ -10,12 +10,14 @@ interface OfferChipProps {
 }
 
 export const OfferChip = ({ offer }: OfferChipProps) => {
-  if(!offer.active){
-    return null
+  if (!offer.active) {
+    return null;
   }
-  
+
   return (
-    <Tooltip title={`On the marketplace for Ξ ${offer.price} by ${offer.seller}`}>
+    <Tooltip
+      title={`On the marketplace for Ξ ${offer.price} by ${offer.seller}`}
+    >
       <KittyChip
         icon={<FontAwesomeIcon icon={faStore} fixedWidth />}
         label={`Ξ  ${offer.price}`}

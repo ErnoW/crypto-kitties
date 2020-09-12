@@ -7,7 +7,7 @@ export const useFetch = <Response extends unknown>(
   {
     fetchOnLoad = true,
     fetchOnLoadArgs = [],
-  }: { fetchOnLoad?: boolean; fetchOnLoadArgs?: unknown[] } = {},
+  }: { fetchOnLoad?: boolean; fetchOnLoadArgs?: unknown[] } = {}
 ) => {
   const [hasError, setError] = useState(false);
   const [isFetching, setIsFetching] = useState(false);
@@ -34,7 +34,7 @@ export const useFetch = <Response extends unknown>(
         setIsFetching(false);
       }
     },
-    [contract, name],
+    [contract, name]
   );
 
   useEffect(() => {

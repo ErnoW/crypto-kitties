@@ -11,7 +11,7 @@ import { capitalizeFirstLetter } from "./string";
 // See https://github.com/meodai/color-names
 const colors = colorNameList.reduce(
   (o, { name, hex }) => Object.assign(o, { [name]: hex }),
-  {},
+  {}
 );
 const nearest = nearestColor.from(colors);
 
@@ -96,7 +96,7 @@ export const getCatName = (catConfig: CatConfig, id: number) => {
     catConfig.mouth,
     catConfig.decoration,
     catConfig.hidden1,
-    IDBRequest
+    IDBRequest,
   ];
   const dataForAdjectiveHash = [
     catConfig.mainColor,
@@ -108,15 +108,19 @@ export const getCatName = (catConfig: CatConfig, id: number) => {
     catConfig.mouth,
     catConfig.decoration,
     catConfig.hidden2,
-    id
+    id,
   ];
 
-  const baseName = names[
-    parseInt(sha256().update(dataForNameHash).digest("hex"), 16) % names.length
-  ];
-  const adjective = adjectives[
-    parseInt(sha256().update(dataForAdjectiveHash).digest("hex"), 16) % adjectives.length
-  ];
+  const baseName =
+    names[
+      parseInt(sha256().update(dataForNameHash).digest("hex"), 16) %
+        names.length
+    ];
+  const adjective =
+    adjectives[
+      parseInt(sha256().update(dataForAdjectiveHash).digest("hex"), 16) %
+        adjectives.length
+    ];
 
-  return `${capitalizeFirstLetter(adjective)} ${baseName}`
+  return `${capitalizeFirstLetter(adjective)} ${baseName}`;
 };

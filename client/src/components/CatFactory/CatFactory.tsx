@@ -41,61 +41,53 @@ export const CatFactory = () => {
   const handleRandomize = () => {
     setMainColor(
       Math.floor(
-        Math.random() * catConfig.properties.mainColor.variations.length,
-      ),
+        Math.random() * catConfig.properties.mainColor.variations.length
+      )
     );
     setSecondaryColor(
       Math.floor(
-        Math.random() * catConfig.properties.secondaryColor.variations.length,
-      ),
+        Math.random() * catConfig.properties.secondaryColor.variations.length
+      )
     );
     setEyeColor(
       Math.floor(
-        Math.random() * catConfig.properties.eyeColor.variations.length,
-      ),
+        Math.random() * catConfig.properties.eyeColor.variations.length
+      )
     );
     setPatternColor(
       Math.floor(
-        Math.random() * catConfig.properties.patternColor.variations.length,
-      ),
+        Math.random() * catConfig.properties.patternColor.variations.length
+      )
     );
 
     setPattern(
-      Math.floor(
-        Math.random() * catConfig.properties.pattern.variations.length,
-      ),
+      Math.floor(Math.random() * catConfig.properties.pattern.variations.length)
     );
     setEyes(
-      Math.floor(Math.random() * catConfig.properties.eyes.variations.length),
+      Math.floor(Math.random() * catConfig.properties.eyes.variations.length)
     );
     setMouth(
-      Math.floor(Math.random() * catConfig.properties.mouth.variations.length),
+      Math.floor(Math.random() * catConfig.properties.mouth.variations.length)
     );
     setDecoration(
       Math.floor(
-        Math.random() * catConfig.properties.decoration.variations.length,
-      ),
+        Math.random() * catConfig.properties.decoration.variations.length
+      )
     );
     setHidden1(
-      Math.floor(
-        Math.random() * catConfig.properties.hidden1.variations.length,
-      ),
+      Math.floor(Math.random() * catConfig.properties.hidden1.variations.length)
     );
     setHidden2(
-      Math.floor(
-        Math.random() * catConfig.properties.hidden2.variations.length,
-      ),
+      Math.floor(Math.random() * catConfig.properties.hidden2.variations.length)
     );
     setHidden3(
-      Math.floor(
-        Math.random() * catConfig.properties.hidden3.variations.length,
-      ),
+      Math.floor(Math.random() * catConfig.properties.hidden3.variations.length)
     );
     setBonus1(
-      Math.floor(Math.random() * catConfig.properties.bonus1.variations.length),
+      Math.floor(Math.random() * catConfig.properties.bonus1.variations.length)
     );
     setBonus2(
-      Math.floor(Math.random() * catConfig.properties.bonus2.variations.length),
+      Math.floor(Math.random() * catConfig.properties.bonus2.variations.length)
     );
   };
 
@@ -119,8 +111,8 @@ export const CatFactory = () => {
   const handleCreate = async () => {
     buyKitty.call({
       args: [catDna],
-      afterResponse: handleRandomize
-    })
+      afterResponse: handleRandomize,
+    });
   };
 
   return (

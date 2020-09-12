@@ -11,7 +11,6 @@ const Wrapper = styled.span`
   vertical-align: middle;
   margin-right: 8px;
   margin-left: 8px;
-
 `;
 
 const Address = styled.span`
@@ -21,10 +20,14 @@ const Address = styled.span`
 interface AccountAddressProps {
   children: string;
   iconSize?: number;
-  fullAddress?: boolean
+  fullAddress?: boolean;
 }
 
-export const AccountAddress = ({ children, iconSize,fullAddress = false }: AccountAddressProps) => {
+export const AccountAddress = ({
+  children,
+  iconSize,
+  fullAddress = false,
+}: AccountAddressProps) => {
   return (
     <Wrapper>
       <Identicon account={children} size={iconSize} />

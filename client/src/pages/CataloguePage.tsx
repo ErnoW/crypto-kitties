@@ -26,8 +26,7 @@ export const CataloguePage = ({ children }: CataloguePageProps) => {
     loadKitties();
   }, [kittyCore]);
 
-
-  const ids = [...Array(totalSupply)].map((_, i) => i)
+  const ids = [...Array(totalSupply)].map((_, i) => i);
   return (
     <div>
       <Header title="Catalogue" subTitle="A list of all the cryptokitties" />

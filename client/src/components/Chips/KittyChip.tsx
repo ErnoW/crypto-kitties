@@ -15,6 +15,6 @@ const StyledChip = styled(Chip)`
 
 export const KittyChip = React.forwardRef((props: ChipProps, ref) => {
   return (
-    <StyledChip color="secondary" size="small" {...props} innerRef={ref}/>
+    <StyledChip color="secondary" size="small" {...props} innerRef={ref} />
   );
-})
+});

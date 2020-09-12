@@ -9,20 +9,18 @@ import { CatConfig } from "../Cat/Cat";
 import { shouldShowPattern } from "../../utils/catLogic";
 
 interface PatternChipProps {
-  kittyConfig:CatConfig
+  kittyConfig: CatConfig;
 }
 
-export const PatternChip = ({
-  kittyConfig,
-}: PatternChipProps) => {
+export const PatternChip = ({ kittyConfig }: PatternChipProps) => {
   const { patternColor, pattern } = kittyConfig;
 
   const colorHex = catConfig.properties.mainColor.variations[patternColor];
   const colorName = getColorName(colorHex);
   const patternName = getPatternName(pattern);
 
-  if(!shouldShowPattern(kittyConfig)) {
-    return null
+  if (!shouldShowPattern(kittyConfig)) {
+    return null;
   }
 
   const label = `${colorName} ${patternName} Pattern`;

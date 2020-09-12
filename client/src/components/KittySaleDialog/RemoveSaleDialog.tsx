@@ -8,9 +8,7 @@ import {
   Button,
 } from "@material-ui/core";
 import { FetchedKitty } from "../../hooks/useFetchKitty";
-import {
-  useMarketPlaceContract,
-} from "../../hooks/useContract";
+import { useMarketPlaceContract } from "../../hooks/useContract";
 import { useKittyOffer, FetchedOffer } from "../../hooks/useKittyOffer";
 import { useFunction } from "../../hooks/useFunction";
 
@@ -31,17 +29,14 @@ export const RemoveSaleDialog = ({
 }: RemoveSaleDialogProps) => {
   const { loadOffer } = useKittyOffer(kittyData.id);
   const marketPlace = useMarketPlaceContract();
-  const removeOffer = useFunction(
-    marketPlace,
-    "removeOffer",
-  );
+  const removeOffer = useFunction(marketPlace, "removeOffer");
 
   const handleRemove = async () => {
     removeOffer.call({
       args: [kittyData.id],
       afterResponse: onClose,
-      afterConfirmation: ()=>loadOffer(marketPlace, true)
-    })
+      afterConfirmation: () => loadOffer(marketPlace, true),
+    });
   };
 
   return (

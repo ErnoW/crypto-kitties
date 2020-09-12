@@ -9,13 +9,7 @@ import { supportedChains } from "../../config/chain";
 import { WalletModal } from "./WalletModal";
 
 export const ConnectButton = () => {
-  const {
-    error,
-    activate,
-    active,
-    account,
-    setError,
-  } = useWeb3React();
+  const { error, activate, active, account, setError } = useWeb3React();
   const { enqueueSnackbar } = useSnackbar();
   const supportedChainIds = supportedChains.map(({ id }) => id);
   const injected = new InjectedConnector({
@@ -37,7 +31,7 @@ export const ConnectButton = () => {
           variant: "error",
           preventDuplicate: true,
           key: "connect-wallet-error",
-        },
+        }
       );
     } else {
       enqueueSnackbar(`Could not connect to network: unknown error.`, {

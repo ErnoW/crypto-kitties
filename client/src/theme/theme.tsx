@@ -1,7 +1,7 @@
 import { createMuiTheme } from "@material-ui/core";
 
-export const primaryColor = '#f48c06'
-export const secondaryColor = '#3d405b'
+export const primaryColor = "#f48c06";
+export const secondaryColor = "#3d405b";
 
 export const theme = createMuiTheme({
   palette: {
@@ -38,6 +38,6 @@ export const theme = createMuiTheme({
     ].join(","),
   },
   shape: {
-    borderRadius: 6
-  }
+    borderRadius: 6,
+  },
 });

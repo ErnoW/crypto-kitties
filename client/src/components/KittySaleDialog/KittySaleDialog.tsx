@@ -40,7 +40,7 @@ export const KittySaleDialog = ({
 }: KittySaleDialogProps) => {
   const [hasMarketPlaceApproved, setHasMarketPlaceApproved] = useState(false);
   const [sellPrice, setSellPrice] = useState<number | null>(
-    offer ? Number(offer) : null,
+    offer ? Number(offer) : null
   );
   const [inputError, setInputError] = useState<string | null>(null);
 
@@ -55,7 +55,10 @@ export const KittySaleDialog = ({
     fetchOnLoadArgs: [account, marketPlace?.address],
   });
 
-  console.log({hasMarketPlaceApproved, isApprovedForAllVal: isApprovedForAll.value})
+  console.log({
+    hasMarketPlaceApproved,
+    isApprovedForAllVal: isApprovedForAll.value,
+  });
 
   const handleInputBlur = (event: React.FocusEvent<HTMLInputElement>) => {
     const newValue = Number(event.currentTarget.value);
@@ -133,7 +136,7 @@ export const KittySaleDialog = ({
     );
   }
 
-  if (!(hasMarketPlaceApproved) && !(isApprovedForAll.value)) {
+  if (!hasMarketPlaceApproved && !isApprovedForAll.value) {
     return (
       <Dialog open={isOpen} onClose={onClose}>
         <DialogTitle>Approval required</DialogTitle>
