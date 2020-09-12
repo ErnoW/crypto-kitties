@@ -5,7 +5,6 @@ import { useStore } from "../store/Store";
 import { useOwnedKitties } from "../hooks/useOwnedKitties";
 import { Redirect } from "react-router";
 import { useKittyCoreContract } from "../hooks/useContract";
-import { useSnackbar } from "notistack";
 import { FetchedKitty } from "../hooks/useFetchKitty";
 import { Cat } from "../components/Cat/Cat";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,9 +12,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Header } from "../components/Header/Header";
 import { useFunction } from "../hooks/useFunction";
 
-interface MyKittiesProps {}
-
-export const MyKitties = ({}: MyKittiesProps) => {
+export const MyKitties = () => {
   const { account } = useStore();
   const { kitties, hasError, loadKittyIds } = useOwnedKitties(account);
   const kittyCore = useKittyCoreContract();

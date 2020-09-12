@@ -3,9 +3,7 @@ import { Typography, Grid } from "@material-ui/core";
 import { Cat } from "../components/Cat/Cat";
 import { CatPreset } from "../config/presetCats";
 
-interface Error404Props {}
-
-export const Error404 = ({}: Error404Props) => {
+export const Error404 = () => {
   return (
     <Grid container justify="center" alignItems="center" spacing={10}>
       <Grid item xs={12} sm={6}>

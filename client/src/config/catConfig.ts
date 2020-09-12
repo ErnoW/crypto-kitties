@@ -39,13 +39,18 @@ import { ReactComponent as DecoF } from "../assets/svg/decoF.svg";
 import { ReactComponent as DecoG } from "../assets/svg/decoG.svg";
 import { ReactComponent as DecoH } from "../assets/svg/decoH.svg";
 import { ReactComponent as DecoI } from "../assets/svg/decoI.svg";
-import { getColorName } from "../utils/getAttributeName";
 
+const Empty = () => null;
 
-const Empty = () => null
-
-
-const greys = ["#ffffff","#f4f4f4", "#dbdbdb", "#a3a3a3", "#6d6d6d", "#111111","#070707"];
+const greys = [
+  "#ffffff",
+  "#f4f4f4",
+  "#dbdbdb",
+  "#a3a3a3",
+  "#6d6d6d",
+  "#111111",
+  "#070707",
+];
 
 const brights = [
   "#e02626",
@@ -79,8 +84,8 @@ const brightlight = [
   "#8060ff",
   "#c560ff",
   "#f760ff",
-  "#ff60ca"
-]
+  "#ff60ca",
+];
 
 const pastels = [
   "#f9a7a7",
@@ -97,7 +102,14 @@ const pastels = [
   "#d981f9",
   "#f7a8e6",
 ];
-const offWhite = ["#fceaea", "#f9f9e8", "#e6f7e8", "#e1f3f4", "#dee0f4", "#f5e6f7"];
+const offWhite = [
+  "#fceaea",
+  "#f9f9e8",
+  "#e6f7e8",
+  "#e1f3f4",
+  "#dee0f4",
+  "#f5e6f7",
+];
 
 const deeper = [
   "#c10000",
@@ -115,7 +127,7 @@ const deeper = [
 ];
 
 const dark = [
-  "#5e0c0c", 
+  "#5e0c0c",
   "#724c15",
   "#405e04",
   "#095e04",
@@ -125,8 +137,8 @@ const dark = [
   "#191a77",
   "#33066b",
   "#62066b",
-  "#6b0348"
-]
+  "#6b0348",
+];
 
 const greyed = [
   "#825757",
@@ -137,15 +149,9 @@ const greyed = [
   "#575782",
   "#745782",
   "#825771",
-]
+];
 
-const slated = [
-  "#3d2222",
-  "#12351d",
-  "#122b35",
-  "#1d1e30",
-  "#331d2b"
-]
+const slated = ["#3d2222", "#12351d", "#122b35", "#1d1e30", "#331d2b"];
 
 const deepDark = [
   "#0f0707",
@@ -154,11 +160,23 @@ const deepDark = [
   "#032b20",
   "#0d1a28",
   "#150f1e",
-]
+];
 
 const extraDark = ["#21181b", "#18211a", "#181a21"];
 
-const colors = [...greys, ...offWhite, ...pastels, ...brightlight, ...brights, ...deeper,...dark, ...greyed, ...slated, ...deepDark, ...extraDark];
+const colors = [
+  ...greys,
+  ...offWhite,
+  ...pastels,
+  ...brightlight,
+  ...brights,
+  ...deeper,
+  ...dark,
+  ...greyed,
+  ...slated,
+  ...deepDark,
+  ...extraDark,
+];
 
 const eyeColors = [
   "#ed1515",
@@ -170,60 +188,95 @@ const eyeColors = [
   "#7d31f7",
   "#f731f4",
   "#000000",
-  "#919eb7"
-]
-
+  "#919eb7",
+];
 
 export const catConfig = {
   properties: {
     mainColor: {
-      variations: colors
+      variations: colors,
     },
     secondaryColor: {
-      variations: colors
+      variations: colors,
     },
     patternColor: {
-      variations: colors
+      variations: colors,
     },
     eyeColor: {
-      variations: eyeColors
+      variations: eyeColors,
     },
     pattern: {
       variations: [
-        Empty, PatternA, PatternB,PatternC,PatternD,PatternE,PatternF,PatternG,PatternH,PatternI,
-      ]
+        Empty,
+        PatternA,
+        PatternB,
+        PatternC,
+        PatternD,
+        PatternE,
+        PatternF,
+        PatternG,
+        PatternH,
+        PatternI,
+      ],
     },
     eyes: {
       variations: [
-        EyesA, EyesB,EyesC,EyesD,EyesE,EyesF,EyesG,EyesH,EyesI,EyesJ
-      ]
+        EyesA,
+        EyesB,
+        EyesC,
+        EyesD,
+        EyesE,
+        EyesF,
+        EyesG,
+        EyesH,
+        EyesI,
+        EyesJ,
+      ],
     },
     mouth: {
       variations: [
-        MouthA, MouthB,MouthC,MouthD,MouthE,MouthF,MouthG,MouthH,MouthI,MouthJ
-      ]
+        MouthA,
+        MouthB,
+        MouthC,
+        MouthD,
+        MouthE,
+        MouthF,
+        MouthG,
+        MouthH,
+        MouthI,
+        MouthJ,
+      ],
     },
     decoration: {
       variations: [
-        Empty, DecoA, DecoB,DecoC,DecoD,DecoE,DecoF,DecoG,DecoH,DecoI,
-      ]
+        Empty,
+        DecoA,
+        DecoB,
+        DecoC,
+        DecoD,
+        DecoE,
+        DecoF,
+        DecoG,
+        DecoH,
+        DecoI,
+      ],
     },
     hidden1: {
-      variations: [...Array(10).keys()]
+      variations: [...Array(10).keys()],
     },
     hidden2: {
-      variations: [...Array(10).keys()]
+      variations: [...Array(10).keys()],
     },
     hidden3: {
-      variations: [...Array(10).keys()]
+      variations: [...Array(10).keys()],
     },
     bonus1: {
-      variations: [...Array(10).keys()]
+      variations: [...Array(10).keys()],
     },
     bonus2: {
-      variations: [...Array(10).keys()]
-    }
-  }
-}
+      variations: [...Array(10).keys()],
+    },
+  },
+};
 
-export type CatConfigProperties = keyof typeof catConfig.properties
+export type CatConfigProperties = keyof typeof catConfig.properties;

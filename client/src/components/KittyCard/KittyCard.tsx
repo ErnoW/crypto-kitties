@@ -3,11 +3,10 @@ import {
   Card,
   CardContent,
   Typography,
-  Chip,
   CardActionArea,
 } from "@material-ui/core";
 import { Cat } from "../Cat/Cat";
-import { useHistory, Redirect } from "react-router";
+import { useHistory } from "react-router";
 import { FetchedKitty } from "../../hooks/useFetchKitty";
 import { GenChip } from "../Chips/GenChip";
 import { useDrag, useDrop } from "react-dnd";

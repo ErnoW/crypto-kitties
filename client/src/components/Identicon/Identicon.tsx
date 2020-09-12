@@ -23,7 +23,7 @@ export const Identicon = ({ account, size = 20 }: IdenticonProps) => {
       element.innerHTML = "";
       element.appendChild(Jazzicon(size, parseInt(account.slice(2, 10), 16)));
     }
-  }, [account]);
+  }, [account, size]);
 
   return <StyledIdenticon ref={ref} size={size} />;
 };

@@ -1,9 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faHatWizard } from "@fortawesome/free-solid-svg-icons";
+import {  faHatWizard } from "@fortawesome/free-solid-svg-icons";
 import { KittyChip } from "./KittyChip";
 import { Tooltip } from "@material-ui/core";
-import { catConfig } from "../../config/catConfig";
 import {  getDecorationName } from "../../utils/getAttributeName";
 import { CatConfig } from "../Cat/Cat";
 import { shouldShowDecoration } from "../../utils/catLogic";

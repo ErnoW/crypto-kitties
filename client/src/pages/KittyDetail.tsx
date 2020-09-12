@@ -32,14 +32,12 @@ import { LoaderBox } from "../components/LoaderBox/LoaderBox";
 import { KittyBuyDialog } from "../components/KittySaleDialog/KittyBuyDialog";
 import { useKittyCoreContract } from "../hooks/useContract";
 
-interface KittyDetailProps {}
-
-export const KittyDetail = ({}: KittyDetailProps) => {
+export const KittyDetail = () => {
   let { id } = useParams();
   const { kittyData, isFetching, hasError } = useFetchKitty(Number(id));
   const { owner, fetchOwner } = useKittyOwner(id);
   const { children } = useChildrenKitties(id);
-  const kittyCore = useKittyCoreContract()
+  const kittyCore = useKittyCoreContract();
   // Make sure to corresponding offer
   useKittyOffer(id);
   // But read data from the store because it can change when still being on this page
@@ -47,7 +45,7 @@ export const KittyDetail = ({}: KittyDetailProps) => {
   const [isSaleDialogOpen, setIsSaleDialogOpen] = useState(false);
   const [isRemoveSaleDialogOpen, setIsRemoveSaleDialogOpen] = useState(false);
   const [isBuyDialogOpen, setIsBuyDialogOpen] = useState(false);
-  
+
   if (hasError) {
     // For now handle all errors as 404 errors
     return <Redirect to="/404" />;
@@ -224,8 +222,9 @@ export const KittyDetail = ({}: KittyDetailProps) => {
           kittyData={kittyData}
           isOpen={isBuyDialogOpen}
           onClose={() => {
-            fetchOwner(kittyCore)
-            setIsBuyDialogOpen(false)}}
+            fetchOwner(kittyCore);
+            setIsBuyDialogOpen(false);
+          }}
           offer={offer}
         />
       )}

@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDna, faPalette } from "@fortawesome/free-solid-svg-icons";
+import { faPalette } from "@fortawesome/free-solid-svg-icons";
 import { KittyChip } from "./KittyChip";
 import { Tooltip } from "@material-ui/core";
 import { catConfig } from "../../config/catConfig";

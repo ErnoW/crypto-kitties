@@ -60,7 +60,7 @@ export const useKittyOffer = (id: number) => {
         setIsFetching(false);
       }
     },
-    [id, offers, marketPlace],
+    [id, offers, marketPlace, addOffer],
   );
 
   useEffect(() => {

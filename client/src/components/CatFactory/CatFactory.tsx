@@ -15,9 +15,7 @@ import { getDnaFromConfig } from "../../utils/getDnaFromConfig";
 import { useKittyCoreContract } from "../../hooks/useContract";
 import { useFunction } from "../../hooks/useFunction";
 
-interface CatFactoryProps {}
-
-export const CatFactory = ({}: CatFactoryProps) => {
+export const CatFactory = () => {
   const kittyCore = useKittyCoreContract();
   const buyKitty = useFunction(kittyCore, "createGen0Kitty");
 

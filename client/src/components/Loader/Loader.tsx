@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { primaryColor, secondaryColor } from "../../theme/theme";
+import { secondaryColor } from "../../theme/theme";
 
 // Source: https://tobiasahlin.com/spinkit/
 

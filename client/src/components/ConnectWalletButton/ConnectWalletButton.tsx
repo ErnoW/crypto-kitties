@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button } from "@material-ui/core";
 
 import { InjectedConnector } from "@web3-react/injected-connector";
@@ -15,7 +15,6 @@ export const ConnectButton = () => {
     active,
     account,
     setError,
-    ...restWeb3Props
   } = useWeb3React();
   const { enqueueSnackbar } = useSnackbar();
   const supportedChainIds = supportedChains.map(({ id }) => id);

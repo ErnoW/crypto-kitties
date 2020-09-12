@@ -1,5 +1,4 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
 import { useAllOffers } from "../hooks/useAllOffers";
 import { KittyGrid } from "../components/KittyGrid/KittyGrid";
 import { Header } from "../components/Header/Header";

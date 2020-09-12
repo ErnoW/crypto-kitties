@@ -10,7 +10,6 @@ import {
 } from "@material-ui/core";
 import { FetchedKitty } from "../../hooks/useFetchKitty";
 import { useMarketPlaceContract } from "../../hooks/useContract";
-import { useSnackbar } from "notistack";
 import { useKittyOffer, FetchedOffer } from "../../hooks/useKittyOffer";
 import { AccountAddress } from "../AccountAddress/AccountAddress";
 import { useFunction } from "../../hooks/useFunction";

@@ -4,29 +4,15 @@ import {
   Typography,
   Container,
   Box,
-  Link,
-  Grid,
   Paper,
 } from "@material-ui/core";
-import { Factory } from "./pages/Factory";
-import { Home } from "./pages/Home";
-import { Link as RouterLink, Switch, Route } from "react-router-dom";
+import {  Switch } from "react-router-dom";
 import styled from "styled-components";
-import { Error404 } from "./pages/Error404";
-import { CataloguePage } from "./pages/CataloguePage";
+
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import { useKittyCoreContract } from "./hooks/useContract";
 import { useStore, Store } from "./store/Store";
 import { useWeb3React } from "@web3-react/core";
-import { MyKitties } from "./pages/MyKitties";
-import { KittyDetail } from "./pages/KittyDetail";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { OthersKitties } from "./pages/OthersKitties";
-import { MarketPlace } from "./pages/MarketPlace";
-import { primaryColor } from "./theme/theme";
-import { useOwnedKitties } from "./hooks/useOwnedKitties";
 import { NavigationBar } from "./components/layout/NavigationBar";
 import { routes } from "./routes";
 import { Footer } from "./components/layout/Footer";
@@ -55,7 +41,7 @@ function App() {
     } else {
       store.setIsOwner(false);
     }
-  }, [kittyCore, account]);
+  }, [kittyCore, account, store]);
 
   return (
     <>

@@ -78,7 +78,7 @@ const useTransactionMessage = () => {
 
 export const useFunction = (contract: Contract | null, name: string) => {
   const [hasError, setHasError] = useState(false);
-  
+
   const {
     addTransactionMessage,
     removeTransactionMessage,
@@ -115,11 +115,17 @@ export const useFunction = (contract: Contract | null, name: string) => {
         removeTransactionMessage(notificationKey);
         showCompleteMessage(response.hash);
       } catch (error) {
-        console.error(`Error while calling "${name}"`, error)
+        console.error(`Error while calling "${name}"`, error);
         setHasError(true);
       }
     },
-    [contract, name],
+    [
+      contract,
+      name,
+      addTransactionMessage,
+      removeTransactionMessage,
+      showCompleteMessage,
+    ],
   );
 
   return { call, hasError };

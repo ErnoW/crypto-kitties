@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Dialog,
   DialogTitle,
   DialogContent,
   Button,
-  Typography,
   DialogActions,
   DialogContentText,
   Box,
@@ -18,14 +17,7 @@ interface WalletModalProps {
 }
 
 export const WalletModal = ({ isOpen, onClose }: WalletModalProps) => {
-  const {
-    error,
-    activate,
-    deactivate,
-    active,
-    account,
-    setError,
-  } = useWeb3React();
+  const { deactivate, account } = useWeb3React();
 
   if (!account) {
     return null;
@@ -39,22 +31,21 @@ export const WalletModal = ({ isOpen, onClose }: WalletModalProps) => {
       <DialogTitle id="wallet-modal-title">Account</DialogTitle>
       <DialogContent>
         <DialogContentText>
-        This is your account that is currenty in use. You can change an account
-        via Metamask, or disconnect the current account via the button below.
+          This is your account that is currenty in use. You can change an
+          account via Metamask, or disconnect the current account via the button
+          below.
         </DialogContentText>
       </DialogContent>
       <DialogContent dividers>
-        <Box display="flex"  alignContent="center" >
-        <AccountAddress>{account}</AccountAddress>
-        <Button onClick={deactivate} color="secondary">
-          Disconnect
-        </Button>
+        <Box display="flex" alignContent="center">
+          <AccountAddress>{account}</AccountAddress>
+          <Button onClick={deactivate} color="secondary">
+            Disconnect
+          </Button>
         </Box>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose}>
-          Cancel
-        </Button>
+        <Button onClick={onClose}>Cancel</Button>
       </DialogActions>
     </Dialog>
   );

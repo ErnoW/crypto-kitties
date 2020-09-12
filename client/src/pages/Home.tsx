@@ -3,9 +3,7 @@ import { Cat } from "../components/Cat/Cat";
 import { CatPreset } from "../config/presetCats";
 import { Box, Typography, Link } from "@material-ui/core";
 
-interface HomeProps {}
-
-export const Home = ({}: HomeProps) => {
+export const Home = () => {
   return (
     <div>
       <Typography variant="h1" align="center">

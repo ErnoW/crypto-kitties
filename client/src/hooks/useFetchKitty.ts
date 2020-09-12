@@ -57,7 +57,7 @@ export const useFetchKitty = (id: number ) => {
     } finally {
       setIsFetching(false);
     }
-  }, [id, kitties, kittyCore]);
+  }, [id, kitties, kittyCore, addKitty]);
 
   useEffect(() => {
     loadKitty(kittyCore);

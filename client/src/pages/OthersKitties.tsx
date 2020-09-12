@@ -5,9 +5,7 @@ import { useOwnedKitties } from "../hooks/useOwnedKitties";
 import { Redirect, useParams } from "react-router";
 import { AccountAddress } from "../components/AccountAddress/AccountAddress";
 
-interface OthersKittiesProps {}
-
-export const OthersKitties = ({}: OthersKittiesProps) => {
+export const OthersKitties = () => {
   let { address } = useParams();
   const { kitties, hasError } = useOwnedKitties(address);
 
