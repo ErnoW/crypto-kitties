@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/01e3773d-a42d-47f9-a73f-83733b1b3a75/deploy-status)](https://app.netlify.com/sites/crypto-kitties/deploys)
 
-Website: [crypto-kitties.netlify.app](crypto-kitties.netlify.app)
+Website: [https://crypto-kitties.netlify.app](https://crypto-kitties.netlify.app)
 
 # CryptoKitties
 
